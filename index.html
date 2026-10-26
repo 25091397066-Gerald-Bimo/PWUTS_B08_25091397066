@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#211b39">
+  <meta name="description" content="KosSapa — Portal ulasan dan pelaporan dugaan masalah kos. Project UTS Gerald Bimo, Kelompok 8.">
+  <title>KosSapa | Ulasan & Laporan Kos</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/seed-data.js" defer></script>
+  <script src="assets/js/storage.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-layout" id="appLayout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="#beranda" aria-label="KosSapa, ke beranda">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M5 15.3 16 6l11 9.3V26H5V15.3Z" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/><path d="M11 26v-9h10v9M11 20h10" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></span>
+          <span class="brand-name">kos<span>sapa</span><small>ulasan & pelaporan kos</small></span>
+        </a>
+        <button class="menu-close" id="menuClose" type="button" aria-label="Tutup navigasi">✕</button>
+      </div>
+      <div class="sidebar-label">MENU UTAMA</div>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="#beranda" data-page="beranda" class="nav-link active"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg><span>Beranda</span></a>
+        <a href="#ulasan" data-page="ulasan" class="nav-link"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 3 6 7 .9-5 4.9 1.2 7-6.2-3.4-6.2 3.4 1.2-7-5-4.9 7-.9z"/></svg><span>Ulasan Kos</span></a>
+        <a href="#tulis" data-page="tulis" class="nav-link"><svg viewBox="0 0 24 24" fill="none"><path d="M12 20h9M4 20l4-1 11-11-3-3L5 16z"/></svg><span>Tulis Ulasan</span></a><a href="#lapor" data-page="lapor" class="nav-link"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 2 21h20L12 3zM12 9v5M12 18h.01"/></svg><span>Laporkan Kos</span><span class="nav-new">BARU</span></a><a href="#riwayat" data-page="riwayat" class="nav-link"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3h10l3 3v15H4V3h3Z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg><span>Riwayat Laporan</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-panel">
+                    <strong>Cerita dan laporkan</strong>
+          <p>Bagikan pengalaman atau sampaikan dugaan masalah untuk ditinjau.</p>
+          <a href="#lapor" class="help-link" data-page="lapor">Buat laporan <span>→</span></a>
+        </div>
+        <div class="side-credit">PROYEK UTS · MI 2025B<br><strong>Gerald Bimo · 25091397066</strong></div>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay" hidden></div>
+    <div class="content-layout">
+      <header class="topbar">
+        <div class="topbar-start">
+          <button id="menuToggle" class="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Buka navigasi"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+          <div class="crumb"><span>Ulasan & Laporan Kos</span><span class="crumb-slash">/</span><strong id="breadcrumb">Beranda</strong></div>
+        </div>
+        <div class="topbar-end"><div class="online-status"><span></span> Mode Demo</div><div class="profile-avatar">KD</div><div class="profile-label"><strong id="profileName">Pengguna Demo</strong><small>Disimpan di browser</small></div></div>
+      </header>
+      <main class="main-content" id="pageContent" tabindex="-1" aria-live="polite">
+        <div class="page-loading"><div class="loading-ring"></div><p>Memuat halaman...</p></div>
+      </main>
+      <footer class="footer"><span>© 2026 KosSapa · Sistem Informasi Manajemen Kos · Modul Tambahan</span><span>UTS Pemrograman Web · Kelompok 8</span></footer>
+    </div>
+  </div>
+  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="detailDialog" class="detail-dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-top"><span class="dialog-kicker">RINCIAN LAPORAN</span><button type="button" id="dialogClose" class="dialog-close" aria-label="Tutup detail">✕</button></div>
+    <div id="dialogContents"></div>
+  </dialog>
+  <noscript><p style="margin:2rem;font-size:1.1rem">Aktifkan JavaScript untuk menggunakan navigasi Ajax pada website ini.</p></noscript>
+</body>
+</html>
