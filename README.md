@@ -1,4 +1,4 @@
-# KosSapa — UTS Pemrograman Web (Gerald Bimo)
+# KosSapa — Ulasan & Pelaporan kos
 
 - **Mahasiswa:** Gerald Bimo — 25091397066, Kelas 2025B, Kelompok 8
 - **Proposal:** Sistem Informasi Manajemen Kos Berbasis Web
